@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Smidstad — Digital Craft, Built Smarter</title>
+<meta name="description" content="AI-powered websites, portfolios, landing pages and ghostwritten content for creators and businesses. Fast. Forged. Smidstad.">
+<link rel="canonical" href="https://smidstad.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smidstad.com/">
+<meta property="og:title" content="Smidstad — Digital Craft, Built Smarter">
+<meta property="og:description" content="AI-powered websites, portfolios, landing pages and ghostwritten content for creators and businesses. Fast. Forged. Smidstad.">
+<meta property="og:site_name" content="Smidstad">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Smidstad — Digital Craft, Built Smarter">
+<meta name="twitter:description" content="AI-powered websites, portfolios, landing pages and ghostwritten content for creators and businesses. Fast. Forged. Smidstad.">
+
+<!-- Favicon + manifest -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#161614">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://smidstad.com/#organization",
+  "name": "Smidstad",
+  "url": "https://smidstad.com/",
+  "description": "AI-powered websites, portfolios, landing pages and ghostwritten content for creators and businesses.",
+  "email": "hello@smidstad.com",
+  "logo": "https://smidstad.com/favicon.svg"
+}
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0d0d0c;
+  --paper:#f6f4ef;
+  --forge:#161614;
+  --ember:#ccf24d;
+  --ember-bright:#d8ff5c;
+  --muted:#75736d;
+  --muted-light:rgba(246,244,239,.55);
+  --border:rgba(13,13,12,0.1);
+  --font-display:'Clash Display','Syne',sans-serif;
+  --font-body:'General Sans','DM Sans',system-ui,sans-serif;
+}
+
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+body{
+  font-family:var(--font-body);
+  background:var(--paper);
+  color:var(--ink);
+  overflow-x:hidden;
+  font-size:17px;
+  line-height:1.65;
+  letter-spacing:-.005em;
+}
+
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;z-index:9999;
+  opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;
+}
+
+/* LOGO MARK */
+.logo-mark{
+  width:32px;height:32px;
+  flex-shrink:0;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.5rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:padding .3s, background .3s;
+}
+
+nav.scrolled{
+  padding:1rem 3rem;
+  background:rgba(22,22,20,.85);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(246,244,239,.06);
+}
+
+.nav-logo{
+  font-family:var(--font-display);
+  font-size:1.35rem;font-weight:600;
+  letter-spacing:-.02em;
+  color:var(--paper);
+  text-decoration:none;
+  display:flex;align-items:center;gap:.625rem;
+}
+
+.nav-links{
+  display:flex;align-items:center;gap:2.25rem;
+  list-style:none;
+}
+
+.nav-links a{
+  color:var(--muted-light);
+  text-decoration:none;
+  font-size:.9375rem;
+  font-weight:500;
+  transition:color .2s;
+}
+
+.nav-links a:hover{color:var(--paper)}
+
+.nav-cta{
+  background:var(--ember);
+  color:var(--ink)!important;
+  padding:.5625rem 1.375rem;
+  border-radius:100px;
+  font-weight:600!important;
+  font-size:.9375rem!important;
+  transition:background .2s, transform .15s!important;
+}
+
+.nav-cta:hover{background:var(--ember-bright)!important;transform:translateY(-1px)}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:var(--forge);
+  display:grid;
+  grid-template-rows:1fr auto;
+  padding:0 3rem 4rem;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-bg-circle{
+  position:absolute;
+  width:1000px;height:1000px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(204,242,77,.07) 0%, transparent 65%);
+  top:-250px;right:-250px;
+  pointer-events:none;
+}
+
+.hero-content{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:4rem;
+  align-items:end;
+  padding-top:12rem;
+  max-width:1400px;
+  margin:0 auto;
+  width:100%;
+}
+
+.hero-left h1{
+  font-family:var(--font-display);
+  font-size:clamp(3.5rem,6.5vw,6.5rem);
+  font-weight:600;
+  line-height:.92;
+  letter-spacing:-.035em;
+  color:var(--paper);
+  margin-bottom:2rem;
+}
+
+.hero-left h1 em{
+  font-style:normal;
+  color:var(--ember);
+  position:relative;
+}
+
+.hero-sub{
+  font-size:1.1875rem;
+  color:var(--muted-light);
+  line-height:1.6;
+  max-width:400px;
+  font-weight:400;
+}
+
+.hero-right{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  gap:2.25rem;
+  padding-bottom:.5rem;
+}
+
+.hero-stat-row{
+  display:flex;
+  gap:2.75rem;
+  padding-top:2rem;
+  border-top:1px solid rgba(246,244,239,.1);
+}
+
+.hero-stat-num{
+  display:block;
+  font-family:var(--font-display);
+  font-size:2.125rem;
+  font-weight:600;
+  color:var(--paper);
+  letter-spacing:-.025em;
+}
+
+.hero-stat-label{
+  display:block;
+  font-size:.875rem;
+  color:rgba(246,244,239,.45);
+  margin-top:.375rem;
+  font-weight:400;
+}
+
+.hero-cta-group{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+
+.btn-primary{
+  background:var(--ember);
+  color:var(--ink);
+  padding:.9375rem 2rem;
+  border-radius:100px;
+  font-weight:600;
+  font-size:1rem;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  transition:transform .2s, background .2s;
+  letter-spacing:-.01em;
+}
+
+.btn-primary:hover{transform:translateY(-2px);background:var(--ember-bright)}
+
+.btn-ghost{
+  color:var(--muted-light);
+  padding:.9375rem 1.5rem;
+  font-size:1rem;
+  font-weight:500;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  transition:color .2s;
+}
+
+.btn-ghost:hover{color:var(--paper)}
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:rgba(204,242,77,.1);
+  border:1px solid rgba(204,242,77,.2);
+  border-radius:100px;
+  padding:.4375rem 1rem;
+  font-size:.875rem;
+  font-weight:500;
+  color:var(--ember);
+  margin-bottom:1.75rem;
+  width:fit-content;
+}
+
+.pulse{
+  width:6px;height:6px;
+  background:var(--ember);
+  border-radius:50%;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.5;transform:scale(.8)}
+}
+
+/* MARQUEE */
+.marquee-section{
+  background:var(--ember);
+  padding:1.125rem 0;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.marquee-track{
+  display:inline-flex;
+  animation:marquee 22s linear infinite;
+}
+
+.marquee-item{
+  font-family:var(--font-display);
+  font-size:.9375rem;
+  font-weight:600;
+  color:var(--ink);
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  padding:0 2.5rem;
+  display:inline-flex;
+  align-items:center;
+  gap:2.5rem;
+}
+
+.marquee-item::after{content:'✦';opacity:.45}
+
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* SECTIONS */
+section{padding:7rem 3rem}
+.section-inner{max-width:1400px;margin:0 auto}
+
+.section-label{
+  font-size:.8125rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:1.25rem;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+.section-label::before{
+  content:'';
+  display:block;
+  width:28px;height:1px;
+  background:currentColor;
+}
+
+/* SERVICES */
+.forge-section{background:var(--paper)}
+
+.forge-header{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:4rem;
+  align-items:end;
+  margin-bottom:4.5rem;
+}
+
+.forge-header h2{
+  font-family:var(--font-display);
+  font-size:clamp(2.5rem,4.5vw,4.25rem);
+  font-weight:600;
+  line-height:1;
+  letter-spacing:-.035em;
+}
+
+.forge-header p{
+  font-size:1.125rem;
+  color:var(--muted);
+  line-height:1.6;
+  max-width:380px;
+  align-self:end;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:24px;
+  overflow:hidden;
+}
+
+.service-card{
+  background:var(--paper);
+  padding:2.5rem 2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+  transition:background .25s;
+}
+
+.service-card:hover{background:#efece4}
+
+.service-icon{
+  width:48px;height:48px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.service-icon svg{width:24px;height:24px}
+.service-icon.green{background:#e9f5cd}
+.service-icon.dark{background:var(--forge)}
+.service-icon.warm{background:#fcefdb}
+.service-icon.cool{background:#e4eefb}
+
+.service-card h3{
+  font-family:var(--font-display);
+  font-size:1.3125rem;
+  font-weight:600;
+  letter-spacing:-.02em;
+  line-height:1.15;
+}
+
+.service-card p{
+  font-size:.9688rem;
+  color:var(--muted);
+  line-height:1.6;
+  flex:1;
+}
+
+.service-price{
+  font-family:var(--font-display);
+  font-size:1.625rem;
+  font-weight:600;
+  letter-spacing:-.03em;
+  color:var(--ink);
+}
+
+.service-price span{
+  font-size:.9375rem;
+  font-weight:400;
+  color:var(--muted);
+  letter-spacing:0;
+  font-family:var(--font-body);
+}
+
+/* PROCESS */
+.process-section{background:var(--forge);color:var(--paper)}
+.process-section .section-label{color:rgba(246,244,239,.45)}
+
+.process-section h2{
+  font-family:var(--font-display);
+  font-size:clamp(2.5rem,4.5vw,4.25rem);
+  font-weight:600;
+  letter-spacing:-.035em;
+  line-height:1;
+  margin-bottom:4.5rem;
+  max-width:640px;
+}
+
+.process-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(246,244,239,.1);
+  border-radius:24px;
+  overflow:hidden;
+}
+
+.step{
+  padding:3rem 2.5rem;
+  background:var(--forge);
+}
+
+.step-num{
+  font-family:var(--font-display);
+  font-size:3.5rem;
+  font-weight:600;
+  color:rgba(246,244,239,.09);
+  letter-spacing:-.04em;
+  line-height:1;
+  margin-bottom:2rem;
+}
+
+.step h3{
+  font-family:var(--font-display);
+  font-size:1.375rem;
+  font-weight:600;
+  letter-spacing:-.02em;
+  margin-bottom:.875rem;
+  color:var(--paper);
+}
+
+.step p{
+  font-size:.9688rem;
+  color:rgba(246,244,239,.55);
+  line-height:1.6;
+}
+
+.step-badge{
+  display:inline-flex;
+  margin-top:1.5rem;
+  background:rgba(204,242,77,.12);
+  border:1px solid rgba(204,242,77,.22);
+  color:var(--ember);
+  padding:.4375rem .9375rem;
+  border-radius:100px;
+  font-size:.875rem;
+  font-weight:500;
+}
+
+/* PRICING */
+.pricing-section{background:#efece4}
+
+.pricing-header{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:end;
+  margin-bottom:3.5rem;
+}
+
+.pricing-header h2{
+  font-family:var(--font-display);
+  font-size:clamp(2.5rem,4.5vw,4.25rem);
+  font-weight:600;
+  letter-spacing:-.035em;
+  line-height:1;
+}
+
+.pricing-note{
+  font-size:.9688rem;
+  color:var(--muted);
+  max-width:260px;
+  text-align:right;
+  line-height:1.55;
+}
+
+.pricing-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem;
+}
+
+.pricing-card{
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:2.75rem;
+  transition:transform .25s;
+}
+
+.pricing-card:hover{transform:translateY(-4px)}
+
+.pricing-card.featured{
+  background:var(--forge);
+  border-color:transparent;
+  color:var(--paper);
+}
+
+.pricing-card-label{
+  font-size:.8125rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:1.5rem;
+}
+
+.pricing-card.featured .pricing-card-label{color:rgba(246,244,239,.45)}
+
+.pricing-card-price{
+  font-family:var(--font-display);
+  font-size:3.75rem;
+  font-weight:600;
+  letter-spacing:-.04em;
+  line-height:1;
+  margin-bottom:.625rem;
+}
+
+.pricing-card-desc{
+  font-size:.9688rem;
+  color:var(--muted);
+  margin-bottom:2rem;
+  line-height:1.55;
+}
+
+.pricing-card.featured .pricing-card-desc{color:rgba(246,244,239,.55)}
+
+.pricing-features{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:.875rem;
+  margin-bottom:2.5rem;
+}
+
+.pricing-features li{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  font-size:.9688rem;
+  color:var(--ink);
+}
+
+.pricing-card.featured .pricing-features li{color:rgba(246,244,239,.85)}
+
+.feat-check{
+  width:21px;height:21px;
+  background:var(--ember);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.feat-check svg{width:11px;height:11px}
+
+.btn-card{
+  display:block;
+  text-align:center;
+  padding:.9375rem;
+  border-radius:100px;
+  font-weight:600;
+  font-size:.9688rem;
+  text-decoration:none;
+  transition:transform .2s, background .2s;
+}
+
+.btn-card:hover{transform:translateY(-1px)}
+.btn-card-dark{background:var(--ink);color:var(--paper)}
+.btn-card-ember{background:var(--ember);color:var(--ink)}
+
+/* CTA */
+.cta-section{
+  background:var(--ember);
+  padding:7rem 3rem;
+  text-align:center;
+}
+
+.cta-section h2{
+  font-family:var(--font-display);
+  font-size:clamp(3rem,6.5vw,5.5rem);
+  font-weight:600;
+  letter-spacing:-.04em;
+  line-height:.95;
+  color:var(--ink);
+  margin-bottom:1.5rem;
+}
+
+.cta-section p{
+  font-size:1.1875rem;
+  color:rgba(13,13,12,.6);
+  max-width:420px;
+  margin:0 auto 3rem;
+  line-height:1.6;
+}
+
+/* CONTACT */
+.contact-section{background:var(--paper)}
+.contact-inner{max-width:720px;margin:0 auto}
+
+.contact-inner h2{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,3.5vw,3.5rem);
+  font-weight:600;
+  letter-spacing:-.035em;
+  line-height:1.05;
+  margin-bottom:1rem;
+}
+
+.contact-inner > p{
+  color:var(--muted);
+  font-size:1.125rem;
+  margin-bottom:3rem;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  margin-bottom:1rem;
+}
+
+.form-field{display:flex;flex-direction:column;gap:.5rem}
+
+.form-field label{
+  font-size:.8125rem;
+  font-weight:600;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea{
+  background:#efece4;
+  border:1px solid transparent;
+  border-radius:14px;
+  padding:1rem 1.25rem;
+  font-family:var(--font-body);
+  font-size:1rem;
+  color:var(--ink);
+  transition:border-color .2s, background .2s;
+  outline:none;
+  width:100%;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder{color:#a3a199}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  border-color:var(--ink);
+  background:#eae7df;
+}
+
+.form-field textarea{resize:none}
+
+.form-submit{
+  margin-top:1.5rem;
+  width:100%;
+  background:var(--ink);
+  color:var(--paper);
+  border:none;
+  padding:1.1875rem;
+  border-radius:100px;
+  font-family:var(--font-body);
+  font-size:1.0625rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .2s, transform .15s;
+  letter-spacing:-.01em;
+}
+
+.form-submit:hover{background:#000;transform:translateY(-2px)}
+
+.form-fine{
+  text-align:center;
+  margin-top:1.25rem;
+  font-size:.875rem;
+  color:var(--muted);
+}
+
+.form-fine a{color:var(--ink);text-underline-offset:3px}
+
+/* FOOTER */
+footer{
+  background:var(--forge);
+  padding:3rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.footer-logo{
+  font-family:var(--font-display);
+  font-size:1.25rem;
+  font-weight:600;
+  letter-spacing:-.02em;
+  color:var(--paper);
+  text-decoration:none;
+  display:flex;align-items:center;gap:.625rem;
+}
+
+.footer-copy{font-size:.875rem;color:rgba(246,244,239,.35)}
+
+.footer-links{display:flex;gap:2rem;list-style:none}
+
+.footer-links a{
+  font-size:.875rem;
+  color:rgba(246,244,239,.4);
+  text-decoration:none;
+  transition:color .2s;
+}
+
+.footer-links a:hover{color:var(--paper)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:1.25rem 1.5rem}
+  nav.scrolled{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  section{padding:5rem 1.5rem}
+  .hero{padding:0 1.5rem 3rem}
+  .hero-content{grid-template-columns:1fr;padding-top:8rem;gap:2.5rem}
+  .hero-right{display:none}
+  .forge-header{grid-template-columns:1fr;gap:1.5rem}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .pricing-header{grid-template-columns:1fr}
+  .pricing-note{text-align:left;max-width:none;margin-top:1rem}
+  footer{flex-direction:column;gap:2rem;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo">
+    <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="9" fill="#ccf24d"/>
+      <path d="M11 21.5C11 22.5 12.2 23.5 14.2 23.5C16.4 23.5 17.6 22.3 17.6 20.7C17.6 19.1 16.5 18.4 14.6 17.9L13.6 17.6C12.8 17.4 12.4 17.1 12.4 16.5C12.4 15.9 12.9 15.5 13.7 15.5C14.5 15.5 15 15.9 15.1 16.6H17.4C17.3 14.9 16 13.7 13.8 13.7C11.7 13.7 10.3 14.9 10.3 16.6C10.3 18.1 11.3 18.9 13 19.3L14 19.6C15 19.8 15.4 20.1 15.4 20.7C15.4 21.3 14.9 21.7 14.1 21.7C13.2 21.7 12.6 21.3 12.5 20.5L11 21.5Z" fill="#161614"/>
+      <path d="M19.5 9L22.5 12L19.5 15" stroke="#161614" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    smidstad
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact" class="nav-cta">Start a project</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-circle"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <div class="pulse"></div>
+        Now accepting projects
+      </div>
+      <h1>Digital craft,<br><em>forged</em> smarter.</h1>
+      <p class="hero-sub">Websites, portfolios, landing pages, and ghostwritten content — delivered at AI speed with human precision.</p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-cta-group">
+        <a href="#contact" class="btn-primary">Get your mockup →</a>
+        <a href="#services" class="btn-ghost">See the work</a>
+      </div>
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <span class="hero-stat-num">3–7</span>
+          <span class="hero-stat-label">Days to delivery</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">$297</span>
+          <span class="hero-stat-label">Starting price</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">$99</span>
+          <span class="hero-stat-label">Paid mockup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Portfolio Sites</span>
+    <span class="marquee-item">Landing Pages</span>
+    <span class="marquee-item">LinkedIn Ghostwriting</span>
+    <span class="marquee-item">Brand Websites</span>
+    <span class="marquee-item">Content Kits</span>
+    <span class="marquee-item">Lead Generation</span>
+    <span class="marquee-item">Portfolio Sites</span>
+    <span class="marquee-item">Landing Pages</span>
+    <span class="marquee-item">LinkedIn Ghostwriting</span>
+    <span class="marquee-item">Brand Websites</span>
+    <span class="marquee-item">Content Kits</span>
+    <span class="marquee-item">Lead Generation</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="forge-section">
+  <div class="section-inner">
+    <div class="forge-header reveal">
+      <div>
+        <div class="section-label">What we forge</div>
+        <h2>Built for creators.<br>Scaled for business.</h2>
+      </div>
+      <p>Every deliverable is built to a spec, not a template. Fast, intentional, and designed to convert from day one.</p>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-icon green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3b6d11" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+        </div>
+        <h3>Portfolio Sites</h3>
+        <p>Stand-out personal sites for creators, coaches, and solopreneurs. Your brand, your voice, live fast.</p>
+        <div class="service-price">$297 <span>one-time</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon dark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ccf24d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+        </div>
+        <h3>Landing Pages</h3>
+        <p>High-converting single pages for offers, launches, lead magnets, and products. Built to sell.</p>
+        <div class="service-price">$397 <span>one-time</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon warm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#854f0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        </div>
+        <h3>Ghostwriting</h3>
+        <p>LinkedIn posts, email sequences, and content kits. Your ideas, polished and published consistently.</p>
+        <div class="service-price">$997 <span>/ month</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon cool">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185fa5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+        </div>
+        <h3>Business Sites</h3>
+        <p>Full service websites for SMBs. Professional presence that drives real leads and real revenue.</p>
+        <div class="service-price">$997 <span>one-time</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process-section">
+  <div class="section-inner">
+    <div class="section-label">How it works</div>
+    <h2 class="reveal">From idea to live.<br>Painless and fast.</h2>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Tell us your vision</h3>
+        <p>Share your goals, existing brand, or a rough idea. We reply within a few hours — no long intake forms.</p>
+        <span class="step-badge">Free consultation</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Get a custom mockup</h3>
+        <p>Pay $99 and we build a real preview of your site — not a wireframe. Credited toward your full build.</p>
+        <span class="step-badge">$99 — credited on build</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>We deliver and launch</h3>
+        <p>Full build, your domain, revisions included. Live in 3–7 days. You never touch a line of code.</p>
+        <span class="step-badge">3–7 day turnaround</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+  <div class="section-inner">
+    <div class="pricing-header reveal">
+      <div>
+        <div class="section-label">Pricing</div>
+        <h2>Simple.<br>No surprises.</h2>
+      </div>
+      <p class="pricing-note">All projects include one round of revisions and a 14-day support window post-launch.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <div class="pricing-card-label">For Creators</div>
+        <div class="pricing-card-price">$297+</div>
+        <div class="pricing-card-desc">Portfolio sites, landing pages, and content kits for solopreneurs and builders.</div>
+        <ul class="pricing-features">
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> Portfolio or landing page</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> Mobile responsive design</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> Custom to your brand</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> Delivered in 3–5 days</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> One round of revisions</li>
+        </ul>
+        <a href="#contact" class="btn-card btn-card-dark">Get started</a>
+      </div>
+      <div class="pricing-card featured reveal">
+        <div class="pricing-card-label">For Businesses</div>
+        <div class="pricing-card-price" style="color:var(--ember)">$997+</div>
+        <div class="pricing-card-desc">Full service websites, ghostwriting, and lead gen systems for serious operators.</div>
+        <ul class="pricing-features">
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> 5-page professional website</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> SEO-ready structure</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> Contact &amp; lead capture forms</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> Delivered in 5–7 days</li>
+          <li><div class="feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="#161614" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div> Ghostwriting available as add-on</li>
+        </ul>
+        <a href="#contact" class="btn-card btn-card-ember">Start a project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to get<br>forged?</h2>
+  <p>Tell us your project and we'll send a tailored mockup idea within 24 hours.</p>
+  <a href="#contact" class="btn-primary" style="margin:0 auto;display:inline-flex;background:var(--ink);color:var(--paper)">Get your mockup →</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="section-label">Contact</div>
+    <h2 class="reveal">Let's build<br>something great.</h2>
+    <p class="reveal">Fill in the form and we'll get back to you within a few hours with next steps.</p>
+    <form action="https://formsubmit.co/hello@smidstad.com" method="POST" class="reveal">
+      <input type="hidden" name="_subject" value="New Smidstad Project Inquiry">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+        </div>
+      </div>
+      <div class="form-field" style="margin-bottom:1rem">
+        <label for="type">I need</label>
+        <select id="type" name="project_type">
+          <option value="">Select a service...</option>
+          <option value="portfolio">Portfolio site ($297)</option>
+          <option value="landing">Landing page ($397)</option>
+          <option value="business">Business website ($997)</option>
+          <option value="ghostwriting">Ghostwriting ($997/mo)</option>
+          <option value="mockup">Paid mockup first ($99)</option>
+          <option value="other">Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="message">Tell us about your project</label>
+        <textarea id="message" name="message" rows="5" placeholder="What are you building? Who's it for? Any existing site or brand assets we should know about?" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send message — let's build</button>
+      <p class="form-fine">Or email directly: <a href="mailto:hello@smidstad.com">hello@smidstad.com</a></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="footer-logo">
+    <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="9" fill="#ccf24d"/>
+      <path d="M11 21.5C11 22.5 12.2 23.5 14.2 23.5C16.4 23.5 17.6 22.3 17.6 20.7C17.6 19.1 16.5 18.4 14.6 17.9L13.6 17.6C12.8 17.4 12.4 17.1 12.4 16.5C12.4 15.9 12.9 15.5 13.7 15.5C14.5 15.5 15 15.9 15.1 16.6H17.4C17.3 14.9 16 13.7 13.8 13.7C11.7 13.7 10.3 14.9 10.3 16.6C10.3 18.1 11.3 18.9 13 19.3L14 19.6C15 19.8 15.4 20.1 15.4 20.7C15.4 21.3 14.9 21.7 14.1 21.7C13.2 21.7 12.6 21.3 12.5 20.5L11 21.5Z" fill="#161614"/>
+      <path d="M19.5 9L22.5 12L19.5 15" stroke="#161614" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    smidstad
+  </a>
+  <p class="footer-copy">© 2026 Smidstad. AI speed, human craft.</p>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="mailto:hello@smidstad.com">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
