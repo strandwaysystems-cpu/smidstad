@@ -15,8 +15,16 @@ favicon.svg       Logo / favicon
 site.webmanifest  PWA manifest
 robots.txt        Crawler rules
 sitemap.xml       Sitemap
+assets/           Web logo (transparent PNG) + OG social image
+brand/            Source brand renders (wordmark + slate SS monogram)
 DEPLOY.md         Hostinger deploy guide
 ```
+
+## Brand
+
+Forge identity: charcoal `#161614` + lime `#ccf24d`. The nav/footer logo is the
+lime/grey **SMIDSTAD DIGITAL** wordmark (`assets/logo.png`, transparent). The
+slate 3D **SS** monogram render is the social share image (`assets/og-image.jpg`).
 
 ## Deploy
 
