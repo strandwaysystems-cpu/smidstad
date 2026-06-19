@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Vance Fitness — Online Personal Training</title>
+<meta name="description" content="Online personal training for busy professionals. Custom programs, real results. Work with Jordan Vance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<!-- SMIDSTAD SPEC MOCKUP — Built by Smidstad (smidstad.com) -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0d0c;
+  --paper:#f6f4ef;
+  --dark:#111110;
+  --accent:#e8ff6b;
+  --accent2:#c4f135;
+  --muted:#6b6960;
+  --border:rgba(13,13,12,0.1);
+  --font-display:'Clash Display',sans-serif;
+  --font-body:'General Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);overflow-x:hidden;font-size:17px;line-height:1.65}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(17,17,16,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-brand{font-family:var(--font-display);font-size:1.125rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.02em}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.9375rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--accent);color:var(--ink)!important;padding:.5rem 1.25rem;border-radius:100px;font-weight:600!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--accent2)!important}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--dark);display:flex;align-items:center;padding:0 3rem;position:relative;overflow:hidden}
+.hero-noise{position:absolute;inset:0;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px}
+.hero-glow{position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(232,255,107,.08) 0%,transparent 65%);top:-200px;right:-200px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding-top:5rem;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(232,255,107,.1);border:1px solid rgba(232,255,107,.2);border-radius:100px;padding:.375rem .875rem;font-size:.8125rem;font-weight:600;color:var(--accent);margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:.06em}
+.hero h1{font-family:var(--font-display);font-size:clamp(3rem,5.5vw,5.5rem);font-weight:700;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:1.75rem}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.125rem;color:rgba(255,255,255,.55);line-height:1.65;max-width:420px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:var(--ink);padding:.9375rem 2rem;border-radius:100px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:transform .2s,background .2s;letter-spacing:-.01em}
+.btn-primary:hover{transform:translateY(-2px);background:var(--accent2)}
+.btn-ghost{color:rgba(255,255,255,.55);padding:.9375rem 1.5rem;font-size:1rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:color .2s}
+.btn-ghost:hover{color:#fff}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08)}
+.stat-num{display:block;font-family:var(--font-display);font-size:2.25rem;font-weight:700;color:#fff;letter-spacing:-.03em}
+.stat-label{display:block;font-size:.8125rem;color:rgba(255,255,255,.4);margin-top:.25rem}
+.hero-visual{display:flex;flex-direction:column;gap:1rem}
+.hero-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:1.75rem;backdrop-filter:blur(8px)}
+.hero-card-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-bottom:.875rem}
+.hero-card-title{font-family:var(--font-display);font-size:1.125rem;font-weight:600;color:#fff;margin-bottom:.5rem;letter-spacing:-.02em}
+.hero-card-sub{font-size:.9rem;color:rgba(255,255,255,.45)}
+.hero-card-badge{display:inline-flex;margin-top:1rem;background:rgba(232,255,107,.12);border:1px solid rgba(232,255,107,.2);color:var(--accent);padding:.3125rem .75rem;border-radius:100px;font-size:.8125rem;font-weight:600}
+.hero-card.featured{background:var(--accent);border-color:transparent}
+.hero-card.featured .hero-card-label{color:rgba(13,13,12,.5)}
+.hero-card.featured .hero-card-title{color:var(--ink)}
+.hero-card.featured .hero-card-sub{color:rgba(13,13,12,.6)}
+.hero-card.featured .hero-card-badge{background:rgba(13,13,12,.1);border-color:transparent;color:var(--ink)}
+
+/* SOCIAL PROOF */
+.proof-bar{background:var(--paper);padding:2rem 3rem;border-bottom:1px solid var(--border)}
+.proof-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:3rem;flex-wrap:wrap}
+.proof-label{font-size:.8125rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.proof-items{display:flex;gap:2rem;flex-wrap:wrap}
+.proof-item{font-size:.9375rem;color:var(--muted);font-weight:500}
+.proof-item strong{color:var(--ink);font-weight:700}
+
+/* ABOUT */
+.about-section{padding:7rem 3rem;background:#fff}
+.about-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.section-label{font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
+.section-label::before{content:'';display:block;width:28px;height:1px;background:currentColor}
+.about-inner h2{font-family:var(--font-display);font-size:clamp(2.25rem,4vw,3.75rem);font-weight:700;line-height:1;letter-spacing:-.04em;margin-bottom:1.5rem}
+.about-inner p{font-size:1.0625rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+.about-creds{display:flex;flex-direction:column;gap:.75rem;margin-top:2rem}
+.cred{display:flex;align-items:center;gap:.875rem;font-size:.9688rem;font-weight:500}
+.cred-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.about-photo{background:linear-gradient(135deg,#1a1a18 0%,#2d2d2a 100%);border-radius:28px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:5rem;font-weight:700;color:rgba(255,255,255,.06);letter-spacing:-.05em;position:relative;overflow:hidden}
+.about-photo::after{content:'JV';position:absolute;font-family:var(--font-display);font-size:9rem;font-weight:700;color:rgba(232,255,107,.07);letter-spacing:-.05em}
+
+/* PROGRAMS */
+.programs-section{padding:7rem 3rem;background:var(--paper)}
+.programs-inner{max-width:1200px;margin:0 auto}
+.programs-inner h2{font-family:var(--font-display);font-size:clamp(2.25rem,4vw,3.75rem);font-weight:700;line-height:1;letter-spacing:-.04em;margin-bottom:.75rem}
+.programs-intro{font-size:1.0625rem;color:var(--muted);max-width:520px;margin-bottom:4rem}
+.programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.program-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:2.5rem;transition:transform .25s,box-shadow .25s}
+.program-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.program-card.featured{background:var(--dark);color:#fff;border-color:transparent}
+.program-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.75rem;font-size:1.5rem}
+.program-icon.light{background:var(--paper)}
+.program-icon.dark{background:rgba(255,255,255,.08)}
+.program-icon.accent{background:var(--accent)}
+.program-card h3{font-family:var(--font-display);font-size:1.375rem;font-weight:700;letter-spacing:-.025em;margin-bottom:.75rem}
+.program-card.featured h3{color:#fff}
+.program-card p{font-size:.9375rem;color:var(--muted);line-height:1.6;margin-bottom:1.75rem}
+.program-card.featured p{color:rgba(255,255,255,.5)}
+.program-price{font-family:var(--font-display);font-size:1.875rem;font-weight:700;letter-spacing:-.03em;margin-bottom:1.5rem}
+.program-card.featured .program-price{color:var(--accent)}
+.program-price span{font-size:.9375rem;font-weight:400;font-family:var(--font-body);letter-spacing:0;color:var(--muted)}
+.program-card.featured .program-price span{color:rgba(255,255,255,.4)}
+.btn-program{display:block;text-align:center;padding:.875rem;border-radius:100px;font-weight:600;font-size:.9375rem;text-decoration:none;transition:transform .2s,background .2s}
+.btn-program-dark{background:var(--ink);color:#fff}
+.btn-program-accent{background:var(--accent);color:var(--ink)}
+.btn-program-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2)}
+.btn-program:hover{transform:translateY(-1px)}
+
+/* RESULTS */
+.results-section{padding:7rem 3rem;background:var(--dark)}
+.results-inner{max-width:1200px;margin:0 auto}
+.results-inner .section-label{color:rgba(255,255,255,.35)}
+.results-inner h2{font-family:var(--font-display);font-size:clamp(2.25rem,4vw,3.75rem);font-weight:700;line-height:1;letter-spacing:-.04em;color:#fff;margin-bottom:4rem}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.result-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:2rem}
+.result-quote{font-size:1.0625rem;color:rgba(255,255,255,.7);line-height:1.65;margin-bottom:1.5rem;font-style:italic}
+.result-name{font-weight:700;color:#fff;font-size:.9375rem}
+.result-detail{font-size:.875rem;color:rgba(255,255,255,.35);margin-top:.25rem}
+.result-stat{display:inline-flex;margin-top:1rem;background:rgba(232,255,107,.1);border:1px solid rgba(232,255,107,.15);color:var(--accent);padding:.3125rem .875rem;border-radius:100px;font-size:.875rem;font-weight:700;font-family:var(--font-display);letter-spacing:-.01em}
+
+/* CONTACT */
+.contact-section{padding:7rem 3rem;background:var(--paper)}
+.contact-inner{max-width:680px;margin:0 auto;text-align:center}
+.contact-inner h2{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;line-height:.95;letter-spacing:-.04em;margin-bottom:1.25rem}
+.contact-inner p{font-size:1.125rem;color:var(--muted);margin-bottom:3rem;line-height:1.6}
+.contact-btn{background:var(--ink);color:#fff;padding:1.125rem 2.5rem;border-radius:100px;font-weight:700;font-size:1.0625rem;text-decoration:none;display:inline-flex;align-items:center;gap:.625rem;transition:transform .2s,background .2s}
+.contact-btn:hover{transform:translateY(-2px);background:#000}
+.contact-note{margin-top:1.5rem;font-size:.9375rem;color:var(--muted)}
+
+/* FOOTER */
+footer{background:var(--dark);padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{font-family:var(--font-display);font-size:1.125rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.02em}
+.footer-copy{font-size:.875rem;color:rgba(255,255,255,.3)}
+.footer-smidstad{font-size:.8125rem;color:rgba(255,255,255,.2)}
+.footer-smidstad a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.footer-smidstad a:hover{color:rgba(255,255,255,.7)}
+
+/* SPEC BANNER */
+.spec-banner{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;background:var(--ink);color:#fff;border-radius:16px;padding:1rem 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,.25);max-width:280px;font-size:.875rem;line-height:1.5}
+.spec-banner strong{display:block;font-family:var(--font-display);font-size:1rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem;color:var(--accent)}
+.spec-banner a{color:var(--accent);text-decoration:none;font-weight:600}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .hero{padding:0 1.5rem}
+  .hero-inner{grid-template-columns:1fr;padding-top:6rem;gap:3rem}
+  .hero-visual{display:none}
+  .about-section,.programs-section,.results-section,.contact-section{padding:5rem 1.5rem}
+  .about-inner{grid-template-columns:1fr;gap:3rem}
+  .about-photo{display:none}
+  .programs-grid,.results-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1.5rem;text-align:center;padding:2rem 1.5rem}
+  .spec-banner{bottom:1rem;right:1rem;left:1rem;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">Jordan Vance Fitness</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#contact" class="nav-cta">Book a call</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">Online Personal Training</div>
+      <h1>Stop guessing.<br>Start <em>getting</em><br>results.</h1>
+      <p class="hero-sub">Custom training programs and nutrition coaching for busy professionals who are serious about building a body they're proud of — without living in the gym.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Book a free call →</a>
+        <a href="#programs" class="btn-ghost">See programs</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Clients transformed</span>
+        </div>
+        <div>
+          <span class="stat-num">4.9★</span>
+          <span class="stat-label">Average rating</span>
+        </div>
+        <div>
+          <span class="stat-num">12 wk</span>
+          <span class="stat-label">Average program</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card featured">
+        <div class="hero-card-label">This week's focus</div>
+        <div class="hero-card-title">Upper Body Hypertrophy</div>
+        <div class="hero-card-sub">Push / Pull split — 4 sets × 8–12 reps. Progressive overload week 3.</div>
+        <div class="hero-card-badge">Day 3 of 5 ✓</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">Client check-in</div>
+        <div class="hero-card-title">Sarah M. — Week 8</div>
+        <div class="hero-card-sub">Down 11 lbs. Bench press up 25 lbs. Feeling the best I have in years.</div>
+        <div class="hero-card-badge">⭐ 5-star review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof-bar">
+  <div class="proof-inner">
+    <span class="proof-label">Trusted by</span>
+    <div class="proof-items">
+      <span class="proof-item"><strong>200+</strong> clients coached</span>
+      <span class="proof-item"><strong>12 weeks</strong> avg. transformation</span>
+      <span class="proof-item"><strong>NASM certified</strong> personal trainer</span>
+      <span class="proof-item"><strong>Precision Nutrition</strong> certified</span>
+    </div>
+  </div>
+</div>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-label">About Jordan</div>
+      <h2>I've been where you are.</h2>
+      <p>I spent three years spinning my wheels — inconsistent workouts, conflicting advice online, and zero progress to show for it. Then I got serious about the fundamentals: progressive overload, real nutrition, and consistency over perfection.</p>
+      <p>I became a personal trainer because I wanted to cut the learning curve for people like me. No gimmicks, no extreme diets — just a clear plan built around your life, your schedule, and your goals.</p>
+      <div class="about-creds">
+        <div class="cred"><div class="cred-dot"></div> NASM Certified Personal Trainer (CPT)</div>
+        <div class="cred"><div class="cred-dot"></div> Precision Nutrition Level 1 Coach</div>
+        <div class="cred"><div class="cred-dot"></div> 200+ clients coached online since 2021</div>
+        <div class="cred"><div class="cred-dot"></div> Speciality: body recomposition for busy professionals</div>
+      </div>
+    </div>
+    <div class="about-photo"></div>
+  </div>
+</section>
+
+<section class="programs-section" id="programs">
+  <div class="programs-inner">
+    <div class="section-label">Programs</div>
+    <h2>Pick your path.</h2>
+    <p class="programs-intro">Every program is built around your schedule, your equipment, and your goals. No cookie-cutter templates.</p>
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="program-icon light">🏋️</div>
+        <h3>12-Week Transformation</h3>
+        <p>The full package. Custom training + nutrition plan, weekly check-ins, form video reviews, and direct messaging support throughout.</p>
+        <div class="program-price">$350 <span>/ month</span></div>
+        <a href="#contact" class="btn-program btn-program-dark">Apply now</a>
+      </div>
+      <div class="program-card featured">
+        <div class="program-icon dark">⚡</div>
+        <h3>Elite 1-on-1 Coaching</h3>
+        <p>Everything in the 12-week program plus bi-weekly video calls, same-day messaging, and a fully customized macro protocol updated weekly.</p>
+        <div class="program-price">$550 <span>/ month</span></div>
+        <a href="#contact" class="btn-program btn-program-accent">Apply now</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon accent">📋</div>
+        <h3>Custom Program Only</h3>
+        <p>A fully written 12-week training program built for your goals and equipment. No coaching calls — just the plan, delivered in 48 hours.</p>
+        <div class="program-price">$149 <span>one-time</span></div>
+        <a href="#contact" class="btn-program btn-program-dark">Get my program</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results-section" id="results">
+  <div class="results-inner">
+    <div class="section-label">Results</div>
+    <h2>Real clients.<br>Real results.</h2>
+    <div class="results-grid">
+      <div class="result-card">
+        <p class="result-quote">"I'd tried three other coaches before Jordan. This is the first time I've actually stuck to a program and seen my body change. Down 18 lbs in 14 weeks and I feel incredible."</p>
+        <div class="result-name">Marcus T.</div>
+        <div class="result-detail">Software engineer, Toronto</div>
+        <div class="result-stat">−18 lbs in 14 weeks</div>
+      </div>
+      <div class="result-card">
+        <p class="result-quote">"The nutrition coaching alone was worth every penny. Jordan made it simple — no obsessive calorie counting, just real food habits that fit my life as a mom of two."</p>
+        <div class="result-name">Priya K.</div>
+        <div class="result-detail">Marketing director, Vancouver</div>
+        <div class="result-stat">−22 lbs in 16 weeks</div>
+      </div>
+      <div class="result-card">
+        <p class="result-quote">"I travel constantly for work and thought online coaching wouldn't work for me. Jordan built my program around hotel gyms and my schedule. Best investment I've made."</p>
+        <div class="result-name">Derek W.</div>
+        <div class="result-detail">Sales executive, Calgary</div>
+        <div class="result-stat">+15 lbs muscle in 6 months</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <h2>Ready to start?</h2>
+    <p>Book a free 20-minute call. We'll talk about your goals, your schedule, and which program is the right fit. No pressure, no pitch.</p>
+    <a href="https://calendly.com" class="contact-btn">Book your free call →</a>
+    <p class="contact-note">Or email: <a href="mailto:jordan@jordanvancefitness.com" style="color:var(--ink)">jordan@jordanvancefitness.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="footer-brand">Jordan Vance Fitness</a>
+  <p class="footer-copy">© 2026 Jordan Vance Fitness. All rights reserved.</p>
+  <p class="footer-smidstad">Site by <a href="https://smidstad.com" target="_blank">Smidstad</a></p>
+</footer>
+
+<!-- SPEC MOCKUP BANNER -->
+<div class="spec-banner">
+  <strong>Smidstad Spec Mockup</strong>
+  This is a preview site built for outreach purposes. Want a site like this for your coaching brand?
+  <a href="https://smidstad.com" target="_blank">smidstad.com →</a>
+</div>
+
+</body>
+</html>

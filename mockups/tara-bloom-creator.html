@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tara Bloom — Fitness & Lifestyle Creator</title>
+<meta name="description" content="Fitness, food, and real life. Work with Tara Bloom — creator, brand partner, and online coach.">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<!-- SMIDSTAD SPEC MOCKUP — Built by Smidstad (smidstad.com) -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0d0c;
+  --paper:#f7f5f0;
+  --cream:#faf8f3;
+  --dark:#141210;
+  --accent:#ccf24d;
+  --accent2:#b8e030;
+  --sand:#e8e0d0;
+  --muted:#7a7570;
+  --border:rgba(13,13,12,0.09);
+  --font-display:'Clash Display',sans-serif;
+  --font-body:'General Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);overflow-x:hidden;font-size:17px;line-height:1.65}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,245,240,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:var(--font-display);font-size:1.0625rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9375rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink);color:#fff!important;padding:.5rem 1.25rem;border-radius:100px;font-weight:600!important;transition:background .2s!important}
+.nav-cta:hover{background:#000!important}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--dark);display:flex;align-items:center;padding:0 3rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(204,242,77,.07) 0%,transparent 55%);pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;padding-top:5rem;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(204,242,77,.1);border:1px solid rgba(204,242,77,.2);border-radius:100px;padding:.375rem .875rem;font-size:.8125rem;font-weight:600;color:var(--accent);margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:.06em}
+.hero h1{font-family:var(--font-display);font-size:clamp(3rem,5.5vw,5.5rem);font-weight:700;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:1.75rem}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.125rem;color:rgba(255,255,255,.5);line-height:1.65;max-width:440px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn-primary{background:var(--accent);color:var(--ink);padding:.9375rem 2rem;border-radius:100px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:transform .2s,background .2s}
+.btn-primary:hover{transform:translateY(-2px);background:var(--accent2)}
+.btn-ghost{color:rgba(255,255,255,.5);padding:.9375rem 1.5rem;font-size:1rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:color .2s}
+.btn-ghost:hover{color:#fff}
+.hero-social{display:flex;gap:1.5rem;align-items:center}
+.social-link{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.4);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.social-link:hover{color:rgba(255,255,255,.8)}
+.social-count{font-family:var(--font-display);font-size:.9375rem;font-weight:700;color:rgba(255,255,255,.7)}
+.hero-right{display:flex;flex-direction:column;gap:1rem}
+.feature-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1.5rem;display:flex;align-items:center;gap:1.25rem}
+.feature-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.375rem;flex-shrink:0}
+.feature-icon.accent{background:var(--accent)}
+.feature-icon.dark{background:rgba(255,255,255,.08)}
+.feature-text h4{font-family:var(--font-display);font-size:1rem;font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.25rem}
+.feature-text p{font-size:.875rem;color:rgba(255,255,255,.4);line-height:1.5}
+
+/* SECTION COMMON */
+section{padding:7rem 3rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
+.section-label::before{content:'';display:block;width:28px;height:1px;background:currentColor}
+h2.section-title{font-family:var(--font-display);font-size:clamp(2.25rem,4vw,3.75rem);font-weight:700;line-height:1;letter-spacing:-.04em;margin-bottom:.75rem}
+
+/* ABOUT */
+.about-section{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:6rem;align-items:center}
+.about-photo{background:linear-gradient(135deg,#1e1c18 0%,#2e2a22 100%);border-radius:28px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.about-photo::after{content:'TB';position:absolute;font-family:var(--font-display);font-size:9rem;font-weight:700;color:rgba(204,242,77,.07);letter-spacing:-.05em}
+.about-text p{font-size:1.0625rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border)}
+.about-stat-num{font-family:var(--font-display);font-size:2.25rem;font-weight:700;letter-spacing:-.03em;display:block}
+.about-stat-label{font-size:.875rem;color:var(--muted);margin-top:.25rem;display:block}
+
+/* CONTENT */
+.content-section{background:var(--paper)}
+.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.content-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:transform .25s}
+.content-card:hover{transform:translateY(-4px)}
+.content-thumb{background:linear-gradient(135deg,#1a1814 0%,#2a2620 100%);aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+.content-thumb-label{position:absolute;bottom:.75rem;left:.75rem;background:rgba(0,0,0,.6);color:#fff;padding:.25rem .625rem;border-radius:8px;font-size:.75rem;font-weight:600;backdrop-filter:blur(4px)}
+.content-body{padding:1.5rem}
+.content-tag{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.625rem}
+.content-body h4{font-family:var(--font-display);font-size:1.125rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
+.content-body p{font-size:.9rem;color:var(--muted);line-height:1.55}
+
+/* WORK WITH ME */
+.work-section{background:var(--sand)}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem}
+.work-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:2.5rem;transition:transform .25s}
+.work-card:hover{transform:translateY(-4px)}
+.work-card.featured{background:var(--dark);border-color:transparent}
+.work-card h3{font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-.025em;margin-bottom:.875rem}
+.work-card.featured h3{color:#fff}
+.work-card p{font-size:.9688rem;color:var(--muted);line-height:1.6;margin-bottom:2rem}
+.work-card.featured p{color:rgba(255,255,255,.45)}
+.work-price{font-family:var(--font-display);font-size:2.25rem;font-weight:700;letter-spacing:-.03em;margin-bottom:1.5rem}
+.work-card.featured .work-price{color:var(--accent)}
+.work-price span{font-size:.9375rem;font-weight:400;font-family:var(--font-body);letter-spacing:0;color:var(--muted)}
+.work-card.featured .work-price span{color:rgba(255,255,255,.4)}
+.btn-work{display:block;text-align:center;padding:.875rem;border-radius:100px;font-weight:600;font-size:.9375rem;text-decoration:none;transition:transform .2s}
+.btn-work:hover{transform:translateY(-1px)}
+.btn-work-dark{background:var(--ink);color:#fff}
+.btn-work-accent{background:var(--accent);color:var(--ink)}
+
+/* BRANDS */
+.brands-section{background:var(--cream);padding:5rem 3rem}
+.brands-inner{max-width:1200px;margin:0 auto;text-align:center}
+.brands-label{font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem}
+.brands-row{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
+.brand-name{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:rgba(13,13,12,.18);letter-spacing:-.02em;transition:color .2s}
+.brand-name:hover{color:rgba(13,13,12,.4)}
+
+/* CTA */
+.cta-section{background:var(--dark);padding:7rem 3rem;text-align:center}
+.cta-section h2{font-family:var(--font-display);font-size:clamp(3rem,6vw,5.5rem);font-weight:700;line-height:.95;letter-spacing:-.04em;color:#fff;margin-bottom:1.5rem}
+.cta-section h2 em{font-style:normal;color:var(--accent)}
+.cta-section p{font-size:1.125rem;color:rgba(255,255,255,.4);max-width:420px;margin:0 auto 3rem;line-height:1.6}
+.cta-btn{background:var(--accent);color:var(--ink);padding:1.125rem 2.5rem;border-radius:100px;font-weight:700;font-size:1.0625rem;text-decoration:none;display:inline-flex;align-items:center;gap:.625rem;transition:transform .2s,background .2s}
+.cta-btn:hover{transform:translateY(-2px);background:var(--accent2)}
+
+/* FOOTER */
+footer{background:#111;padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{font-family:var(--font-display);font-size:1.0625rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.02em}
+.footer-copy{font-size:.875rem;color:rgba(255,255,255,.25)}
+.footer-smidstad{font-size:.8125rem;color:rgba(255,255,255,.2)}
+.footer-smidstad a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.footer-smidstad a:hover{color:rgba(255,255,255,.7)}
+
+/* SPEC BANNER */
+.spec-banner{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;background:var(--ink);color:#fff;border-radius:16px;padding:1rem 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,.25);max-width:280px;font-size:.875rem;line-height:1.5}
+.spec-banner strong{display:block;font-family:var(--font-display);font-size:1rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem;color:var(--accent)}
+.spec-banner a{color:var(--accent);text-decoration:none;font-weight:600}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .hero{padding:0 1.5rem}
+  .hero-inner{grid-template-columns:1fr;padding-top:6rem;gap:3rem}
+  .hero-right{display:none}
+  section{padding:5rem 1.5rem}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .about-photo{display:none}
+  .about-stats,.content-grid,.work-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1.5rem;text-align:center;padding:2rem 1.5rem}
+  .spec-banner{bottom:1rem;right:1rem;left:1rem;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">Tara Bloom</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#work">Work with me</a></li>
+    <li><a href="#cta" class="nav-cta">Get in touch</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Fitness & Lifestyle Creator</div>
+      <h1>Fitness that<br>fits your <em>actual</em><br>life.</h1>
+      <p class="hero-sub">I create honest, practical fitness and wellness content for real people. No extreme diets, no perfect bodies — just sustainable habits and a life you enjoy living.</p>
+      <div class="hero-btns">
+        <a href="#work" class="btn-primary">Work with me →</a>
+        <a href="#content" class="btn-ghost">See my content</a>
+      </div>
+      <div class="hero-social">
+        <a href="#" class="social-link"><span class="social-count">142K</span> Instagram</a>
+        <a href="#" class="social-link"><span class="social-count">68K</span> TikTok</a>
+        <a href="#" class="social-link"><span class="social-count">12K</span> Newsletter</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="feature-card">
+        <div class="feature-icon accent">📱</div>
+        <div class="feature-text">
+          <h4>Brand partnerships</h4>
+          <p>Authentic integrations with brands I actually use and believe in.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon dark">🏋️</div>
+        <div class="feature-text">
+          <h4>Online coaching</h4>
+          <p>1-on-1 and group programs for women building sustainable fitness habits.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon dark">✍️</div>
+        <div class="feature-text">
+          <h4>Weekly newsletter</h4>
+          <p>12K subscribers. Fitness tips, real talk, and what's actually working for me.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-photo"></div>
+      <div class="about-text">
+        <div class="section-label">About Tara</div>
+        <h2 class="section-title">I'm not a fitness model.<br>I'm a fitness person.</h2>
+        <p>I started posting about fitness in 2019 because I was frustrated by how unrealistic and unsustainable most fitness content was. I wanted to show what it actually looks like to be consistent — not perfect.</p>
+        <p>I'm based in Nashville, TN. I'm a NASM-certified personal trainer and a Precision Nutrition coach. I've built a community of 200K+ people who are done with diet culture and ready to build habits that last.</p>
+        <p>I work with brands that align with my values, and I take on a limited number of 1-on-1 coaching clients each quarter.</p>
+        <div class="about-stats">
+          <div><span class="about-stat-num">200K+</span><span class="about-stat-label">Total following</span></div>
+          <div><span class="about-stat-num">4.8%</span><span class="about-stat-label">Avg. engagement rate</span></div>
+          <div><span class="about-stat-num">6 yrs</span><span class="about-stat-label">Creating content</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" id="content">
+  <div class="section-inner">
+    <div class="section-label">Content</div>
+    <h2 class="section-title">What I create.</h2>
+    <div class="content-grid">
+      <div class="content-card">
+        <div class="content-thumb">🏋️<span class="content-thumb-label">Reel</span></div>
+        <div class="content-body">
+          <div class="content-tag">Training</div>
+          <h4>30-min full body workout (no equipment)</h4>
+          <p>My most-saved post of 2025. 2.1M views on TikTok, 340K saves on IG.</p>
+        </div>
+      </div>
+      <div class="content-card">
+        <div class="content-thumb">🥗<span class="content-thumb-label">Carousel</span></div>
+        <div class="content-body">
+          <div class="content-tag">Nutrition</div>
+          <h4>What I actually eat in a day (no tracking)</h4>
+          <p>Honest, practical, and not obsessive. 180K saves on Instagram.</p>
+        </div>
+      </div>
+      <div class="content-card">
+        <div class="content-thumb">💬<span class="content-thumb-label">Newsletter</span></div>
+        <div class="content-body">
+          <div class="content-tag">Newsletter</div>
+          <h4>The Bloom Brief — weekly fitness & life</h4>
+          <p>12K subscribers. 48% open rate. Sent every Tuesday morning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work-section" id="work">
+  <div class="section-inner">
+    <div class="section-label">Work with me</div>
+    <h2 class="section-title">Two ways to work together.</h2>
+    <div class="work-grid">
+      <div class="work-card">
+        <h3>Brand Partnerships</h3>
+        <p>Sponsored posts, Reels, TikToks, newsletter placements, and long-term ambassador programs. I only work with brands I'd recommend to my best friend. Rates and a media kit available on request.</p>
+        <div class="work-price">Custom <span>pricing</span></div>
+        <a href="#cta" class="btn-work btn-work-dark">Request my media kit</a>
+      </div>
+      <div class="work-card featured">
+        <h3>1-on-1 Online Coaching</h3>
+        <p>Custom training + nutrition coaching for women who want to build sustainable fitness habits. Limited spots each quarter. 12-week program with weekly check-ins, custom programming, and direct messaging support.</p>
+        <div class="work-price">$350 <span>/ month</span></div>
+        <a href="#cta" class="btn-work btn-work-accent">Apply for coaching</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands-section">
+  <div class="brands-inner">
+    <div class="brands-label">Brands I've worked with</div>
+    <div class="brands-row">
+      <span class="brand-name">Lululemon</span>
+      <span class="brand-name">Momentous</span>
+      <span class="brand-name">Whoop</span>
+      <span class="brand-name">Thrive Market</span>
+      <span class="brand-name">Hyperice</span>
+      <span class="brand-name">AG1</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="cta">
+  <h2>Let's build<br>something <em>real.</em></h2>
+  <p>Whether you're a brand looking to partner or someone ready to start their fitness journey — I'd love to hear from you.</p>
+  <a href="mailto:hello@tarabloom.com" class="cta-btn">Get in touch →</a>
+</section>
+
+<footer>
+  <a href="#" class="footer-brand">Tara Bloom</a>
+  <p class="footer-copy">© 2026 Tara Bloom. All rights reserved.</p>
+  <p class="footer-smidstad">Site by <a href="https://smidstad.com" target="_blank">Smidstad</a></p>
+</footer>
+
+<!-- SPEC MOCKUP BANNER -->
+<div class="spec-banner">
+  <strong>Smidstad Spec Mockup</strong>
+  This is a preview site built for outreach purposes. Want a site like this for your creator brand?
+  <a href="https://smidstad.com" target="_blank">smidstad.com →</a>
+</div>
+
+</body>
+</html>
