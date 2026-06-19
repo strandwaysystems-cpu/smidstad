@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smidstad — Spec Mockups</title>
+<meta name="description" content="Smidstad spec mockups — see what your site could look like before you commit.">
+<link rel="canonical" href="https://smidstad.com/mockups/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0d0c;
+  --paper:#f6f4ef;
+  --forge:#161614;
+  --ember:#ccf24d;
+  --ember-bright:#d8ff5c;
+  --muted:#75736d;
+  --border:rgba(13,13,12,0.1);
+  --font-display:'Clash Display',sans-serif;
+  --font-body:'General Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);overflow-x:hidden;font-size:17px;line-height:1.65;min-height:100vh}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:padding .3s,background .3s}
+nav.scrolled{padding:1rem 3rem;background:rgba(22,22,20,.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(246,244,239,.06)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo-img{height:38px;width:auto;display:block;transition:height .3s}
+nav.scrolled .nav-logo-img{height:32px}
+.nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9375rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ember);color:var(--ink)!important;padding:.5625rem 1.375rem;border-radius:100px;font-weight:600!important;font-size:.9375rem!important;transition:background .2s,transform .15s!important}
+.nav-cta:hover{background:var(--ember-bright)!important;transform:translateY(-1px)}
+
+/* HERO */
+.page-hero{background:var(--forge);padding:10rem 3rem 6rem;position:relative;overflow:hidden}
+.hero-glow{position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(204,242,77,.06) 0%,transparent 65%);top:-300px;right:-200px;pointer-events:none}
+.page-hero-inner{max-width:1400px;margin:0 auto;position:relative;z-index:1}
+.page-label{font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,244,239,.35);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+.page-label::before{content:'';display:block;width:28px;height:1px;background:currentColor}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(3rem,6vw,5.5rem);font-weight:700;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:1.5rem}
+.page-hero h1 em{font-style:normal;color:var(--ember)}
+.page-hero p{font-size:1.1875rem;color:rgba(246,244,239,.5);max-width:540px;line-height:1.65}
+
+/* GALLERY */
+.gallery-section{padding:6rem 3rem 8rem}
+.gallery-inner{max-width:1400px;margin:0 auto}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.mockup-card{background:#fff;border:1px solid var(--border);border-radius:28px;overflow:hidden;transition:transform .3s,box-shadow .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.mockup-card:hover{transform:translateY(-6px);box-shadow:0 24px 80px rgba(13,13,12,.1)}
+.mockup-preview{aspect-ratio:16/10;position:relative;overflow:hidden;flex-shrink:0}
+.mockup-preview iframe{width:200%;height:200%;transform:scale(.5);transform-origin:top left;pointer-events:none;border:none}
+.mockup-preview-overlay{position:absolute;inset:0;z-index:2;cursor:pointer}
+.mockup-palette{position:absolute;bottom:1rem;right:1rem;z-index:3;display:flex;gap:.375rem}
+.palette-dot{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.6)}
+.mockup-body{padding:2rem 2rem 2.25rem;flex:1;display:flex;flex-direction:column}
+.mockup-tag{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.875rem}
+.mockup-body h3{font-family:var(--font-display);font-size:1.375rem;font-weight:700;letter-spacing:-.025em;margin-bottom:.625rem}
+.mockup-body p{font-size:.9375rem;color:var(--muted);line-height:1.6;flex:1;margin-bottom:1.75rem}
+.mockup-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--forge);color:#fff;padding:.75rem 1.5rem;border-radius:100px;font-weight:600;font-size:.9375rem;text-decoration:none;transition:background .2s,transform .2s;width:fit-content}
+.mockup-cta:hover{background:#000;transform:translateY(-1px)}
+.mockup-cta-arrow{font-size:1rem;transition:transform .2s}
+.mockup-card:hover .mockup-cta-arrow{transform:translateX(3px)}
+
+/* NAVY card accent */
+.mockup-card.navy .mockup-cta{background:#0f1f3d}
+.mockup-card.navy .mockup-cta:hover{background:#1a3260}
+/* TERRA card accent */
+.mockup-card.terra .mockup-cta{background:#c0522a}
+.mockup-card.terra .mockup-cta:hover{background:#8b3a1c}
+/* SAGE card accent */
+.mockup-card.sage .mockup-cta{background:#1e3a2f}
+.mockup-card.sage .mockup-cta:hover{background:#2a5040}
+
+/* CTA STRIP */
+.cta-strip{background:var(--ember);padding:5rem 3rem;text-align:center}
+.cta-strip h2{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;line-height:.95;letter-spacing:-.04em;color:var(--ink);margin-bottom:1.25rem}
+.cta-strip p{font-size:1.125rem;color:rgba(13,13,12,.6);max-width:440px;margin:0 auto 2.5rem;line-height:1.6}
+.cta-strip-btn{background:var(--ink);color:#fff;padding:1.125rem 2.5rem;border-radius:100px;font-weight:700;font-size:1.0625rem;text-decoration:none;display:inline-flex;align-items:center;gap:.625rem;transition:transform .2s,background .2s}
+.cta-strip-btn:hover{transform:translateY(-2px);background:#000}
+
+/* FOOTER */
+footer{background:var(--forge);padding:3rem;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{display:flex;align-items:center;text-decoration:none}
+.footer-logo-img{height:34px;width:auto;display:block}
+.footer-copy{font-size:.875rem;color:rgba(246,244,239,.35)}
+.footer-links{display:flex;gap:2rem;list-style:none}
+.footer-links a{font-size:.875rem;color:rgba(246,244,239,.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--paper)}
+
+@media(max-width:1024px){
+  .gallery-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  nav{padding:1.25rem 1.5rem}
+  nav.scrolled{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .page-hero{padding:8rem 1.5rem 4rem}
+  .gallery-section{padding:4rem 1.5rem 6rem}
+  .gallery-grid{grid-template-columns:1fr}
+  .cta-strip{padding:4rem 1.5rem}
+  footer{flex-direction:column;gap:2rem;text-align:center;padding:2.5rem 1.5rem}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="nav-logo" aria-label="SmidStad Digital — home">
+    <img src="/assets/logo.png" alt="SmidStad Digital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#process">Process</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/#contact" class="nav-cta">Start a project</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="page-label">Spec mockups</div>
+    <h1>See what your<br>site could <em>look like.</em></h1>
+    <p>These are real spec sites built to show what Smidstad delivers. Each one is a different niche, a different palette, a different brand. Click any card to open it in a new window.</p>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="gallery-inner">
+    <div class="gallery-grid">
+
+      <!-- JORDAN VANCE — NAVY -->
+      <div class="mockup-card navy">
+        <div class="mockup-preview">
+          <iframe src="/mockups/jordan-vance-fitness.html" title="Jordan Vance Fitness mockup" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+          <a href="/mockups/jordan-vance-fitness.html" target="_blank" rel="noopener" class="mockup-preview-overlay" aria-label="Open Jordan Vance Fitness mockup"></a>
+          <div class="mockup-palette">
+            <div class="palette-dot" style="background:#0f1f3d"></div>
+            <div class="palette-dot" style="background:#3b82f6"></div>
+            <div class="palette-dot" style="background:#f4f6fa"></div>
+          </div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-tag">Personal Trainer</div>
+          <h3>Jordan Vance Fitness</h3>
+          <p>A conversion-focused site for an online personal trainer. Navy and blue palette. Programs, results, and a direct booking CTA.</p>
+          <a href="/mockups/jordan-vance-fitness.html" target="_blank" rel="noopener" class="mockup-cta">Open in new window <span class="mockup-cta-arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- MAYA SOLANO — TERRACOTTA -->
+      <div class="mockup-card terra">
+        <div class="mockup-preview">
+          <iframe src="/mockups/maya-solano-coaching.html" title="Maya Solano Coaching mockup" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+          <a href="/mockups/maya-solano-coaching.html" target="_blank" rel="noopener" class="mockup-preview-overlay" aria-label="Open Maya Solano Coaching mockup"></a>
+          <div class="mockup-palette">
+            <div class="palette-dot" style="background:#8b3a1c"></div>
+            <div class="palette-dot" style="background:#c0522a"></div>
+            <div class="palette-dot" style="background:#fdf8f2"></div>
+          </div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-tag">Life & Career Coach</div>
+          <h3>Maya Solano Coaching</h3>
+          <p>A warm, premium site for a life and career coach. Terracotta and cream palette. Two service tiers, testimonials, and a discovery call CTA.</p>
+          <a href="/mockups/maya-solano-coaching.html" target="_blank" rel="noopener" class="mockup-cta">Open in new window <span class="mockup-cta-arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- TARA BLOOM — SAGE -->
+      <div class="mockup-card sage">
+        <div class="mockup-preview">
+          <iframe src="/mockups/tara-bloom-creator.html" title="Tara Bloom Creator mockup" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+          <a href="/mockups/tara-bloom-creator.html" target="_blank" rel="noopener" class="mockup-preview-overlay" aria-label="Open Tara Bloom Creator mockup"></a>
+          <div class="mockup-palette">
+            <div class="palette-dot" style="background:#1e3a2f"></div>
+            <div class="palette-dot" style="background:#4a7c59"></div>
+            <div class="palette-dot" style="background:#f5f2ec"></div>
+          </div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-tag">Fitness & Lifestyle Creator</div>
+          <h3>Tara Bloom</h3>
+          <p>A creator hub for a fitness and lifestyle influencer. Forest green and sage palette. Brand partnerships, coaching, and newsletter integration.</p>
+          <a href="/mockups/tara-bloom-creator.html" target="_blank" rel="noopener" class="mockup-cta">Open in new window <span class="mockup-cta-arrow">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <h2>Want one built<br>for your brand?</h2>
+  <p>Start with a $99 mockup. We build a real preview using your actual brand — not a wireframe. Credited 100% toward your full build.</p>
+  <a href="/#contact" class="cta-strip-btn">Get your $99 mockup →</a>
+</section>
+
+<footer>
+  <a href="/" class="footer-logo" aria-label="SmidStad Digital — home">
+    <img src="/assets/logo.png" alt="SmidStad Digital" class="footer-logo-img">
+  </a>
+  <p class="footer-copy">© 2026 Smidstad. AI speed, human craft.</p>
+  <ul class="footer-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#process">Process</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="mailto:hello@smidstad.com">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+</script>
+</body>
+</html>
