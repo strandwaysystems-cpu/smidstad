@@ -4,3 +4,9 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Vite / Node
+node_modules/
+dist/
+.env
+.env.*

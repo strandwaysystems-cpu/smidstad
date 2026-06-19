@@ -1,0 +1,12 @@
+{
+  "name": "Smidstad",
+  "short_name": "Smidstad",
+  "description": "AI-powered websites, portfolios, landing pages and ghostwritten content for creators and businesses.",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ],
+  "theme_color": "#161614",
+  "background_color": "#f6f4ef",
+  "display": "standalone",
+  "start_url": "/"
+}

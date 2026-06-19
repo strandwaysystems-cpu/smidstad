@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smidstad.com/sitemap.xml

@@ -1,36 +1,53 @@
 # Smidstad
 
-Marketing one-pager for **Smidstad** — AI-powered websites, portfolios, landing
-pages, and ghostwritten content. [smidstad.com](https://smidstad.com)
+Marketing site for **Smidstad** — AI-powered websites, portfolios, landing pages, and ghostwritten content for coaches and creators. [smidstad.com](https://smidstad.com)
 
-## What this is
-
-A single static page. Everything (markup, styling, and the small scroll/reveal
-script) lives inline in `index.html`. No build step, no dependencies, no
-framework — it deploys to any static host by copying the files.
+## Structure
 
 ```
-index.html        Full site
-favicon.svg       Logo / favicon
-site.webmanifest  PWA manifest
-robots.txt        Crawler rules
-sitemap.xml       Sitemap
-assets/           Web logo (transparent PNG) + OG social image
-brand/            Source brand renders (wordmark + slate SS monogram)
-DEPLOY.md         Hostinger deploy guide
+index.html          Full site (markup only — CSS/JS extracted to src/)
+src/
+  styles.css        All site styles
+  main.js           Nav scroll + reveal animation
+public/
+  assets/           Logo, OG image, emblem
+  mockups/          Spec mockup preview pages (served at /mockups/)
+  favicon.svg
+  robots.txt
+  sitemap.xml
+  site.webmanifest
+package.json
+vite.config.js
 ```
 
-## Brand
+## Hostinger Deployment Settings
 
-Forge identity: charcoal `#161614` + lime `#ccf24d`. The nav/footer logo is the
-lime/grey **SMIDSTAD DIGITAL** wordmark (`assets/logo.png`, transparent). The
-slate 3D **SS** monogram render is the social share image (`assets/og-image.jpg`).
+| Setting | Value |
+|---|---|
+| Framework | **Vite** |
+| Branch | `main` |
+| Install command | `npm install` |
+| Build command | `npm run build` |
+| Output / publish directory | `dist` |
+| Root directory | *(repository root)* |
 
-## Deploy
+## Mockup Pages
 
-Served from the repo root on Hostinger via GitHub. See [DEPLOY.md](./DEPLOY.md).
+Live at `smidstad.com/mockups/`:
+- `/mockups/` — gallery index
+- `/mockups/jordan-vance-fitness.html` — personal trainer (navy/blue)
+- `/mockups/maya-solano-coaching.html` — life & career coach (terracotta/cream)
+- `/mockups/tara-bloom-creator.html` — fitness creator (forest/sage)
 
-## Edit
+## Local Dev
 
-Open `index.html` and edit directly. The contact form posts to
-[FormSubmit](https://formsubmit.co/) at `hello@smidstad.com`.
+```bash
+npm install
+npm run dev       # dev server at localhost:5173
+npm run build     # production build → dist/
+npm run preview   # preview built site
+```
+
+## Contact Form
+
+Posts to [FormSubmit](https://formsubmit.co/) at `hello@smidstad.com`. Activate by submitting once and clicking the confirmation email.
