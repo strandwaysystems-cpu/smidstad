@@ -94,6 +94,23 @@ nav.scrolled .nav-logo-img{height:32px}
 
 .nav-cta:hover{background:var(--ember-bright)!important;transform:translateY(-1px)}
 
+/* HAMBURGER TOGGLE */
+.nav-toggle{
+  display:none;
+  background:none;border:none;cursor:pointer;
+  flex-direction:column;gap:5px;
+  padding:6px;
+  z-index:110;
+}
+.nav-toggle span{
+  display:block;width:24px;height:2px;
+  background:var(--paper);border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+nav.nav-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+nav.nav-open .nav-toggle span:nth-child(2){opacity:0}
+nav.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
 /* HERO */
 .hero{
   min-height:100vh;
@@ -750,7 +767,27 @@ footer{
 @media(max-width:768px){
   nav{padding:1.25rem 1.5rem}
   nav.scrolled{padding:1rem 1.5rem}
-  .nav-links{display:none}
+  .nav-toggle{display:flex}
+  .nav-links{
+    display:none;
+    position:fixed;top:0;left:0;right:0;bottom:0;
+    background:rgba(22,22,20,.97);
+    backdrop-filter:blur(20px);
+    flex-direction:column;align-items:center;justify-content:center;
+    gap:2rem;z-index:105;
+    padding:2rem;
+  }
+  nav.nav-open .nav-links{
+    display:flex;
+  }
+  .nav-links a{
+    font-size:1.5rem;
+    color:var(--paper);
+  }
+  .nav-links .nav-cta{
+    font-size:1.125rem!important;
+    padding:.75rem 2rem;
+  }
   section{padding:5rem 1.5rem}
   .hero{padding:0 1.5rem 3rem}
   .hero-content{grid-template-columns:1fr;padding-top:8rem;gap:2.5rem}
