@@ -59,8 +59,8 @@ Three fixed-price tiers. Prices published on the site so prospects self-qualify 
 | **Core** ⭐ | **Pro Site** | **$2,500** | Trainers & creators ready to own their brand | 5-page creator site (Home, About, Programs/Services, Results/Testimonials, Contact), booking integration, local + on-page SEO, analytics, AI-written copy, 2 revision rounds, 30-day support | **5 business days** |
 | **Premium** | **Brand + Content Engine** | **$4,500** | Scaling creators who want presence *and* consistency | Everything in Pro Site **plus** an AI content starter pack (8 IG captions or 4 long posts), brand voice guide, on-page SEO build-out, social-profile optimization, 3 revision rounds, 60-day support, optional Stripe/booking embed | **7–10 business days** |
 
-### 2.1 The $99 paid mockup step (keep this)
-Before a full build, offer a **$99 real preview** of their site — credited 100% toward any package. It qualifies serious buyers, filters tire-kickers, and turns "maybe" into a paid micro-commitment. Keep it as the bridge between interest and the full sale.
+### 2.1 The $29 promo mockup step (keep this)
+Before a full build, offer a **real site preview** for a **limited promo price of $29 (normally $99)** — and credit the **full $99 value** toward any package. The low $29 entry maximizes funnel volume; the full-$99 credit keeps the incentive strong (you absorb the $70 difference as acquisition cost). It qualifies serious buyers, filters tire-kickers, and turns "maybe" into a paid micro-commitment. Keep it as the bridge between interest and the full sale.
 
 ### 2.2 Add-ons (the real margin)
 | Add-on | Price (CAD) | Notes |
@@ -92,7 +92,7 @@ Before a full build, offer a **$99 real preview** of their site — credited 100
 - [ ] Starter deposit link — $750 CAD
 - [ ] Pro deposit link — $1,250 CAD
 - [ ] Authority deposit link — $2,250 CAD
-- [ ] $99 paid-mockup link
+- [ ] $29 promo mockup link (full $99 value credited toward build)
 - [ ] (Optional) Monthly content retainer subscription link(s)
 
 ### 3.3 Intake form (see full checklist in §7)
@@ -106,7 +106,7 @@ Before a full build, offer a **$99 real preview** of their site — credited 100
 ### 3.5 Site repositioning
 - [ ] Rework smidstad.com headline + copy to speak only to creators/coaches.
 - [ ] Publish the $1,500 / $2,500 / $4,500 ladder on the site.
-- [ ] Make a CTA path that goes to the $99 mockup or the booking/intake step.
+- [ ] Make a CTA path that goes to the $29 promo mockup or the booking/intake step.
 
 ---
 
@@ -157,7 +157,7 @@ Before a full build, offer a **$99 real preview** of their site — credited 100
 > 👋 I'm [Your Name] — I build websites + content for coaches and creators. Quick free tip: the 3 things almost every coach's link-in-bio is missing — (1) a single clear offer above the fold, (2) real client results, (3) one obvious "book now" button. Happy to take a quick look at anyone's setup and share what I'd change — just drop your link below. 🛠️
 
 ### Objection handlers
-- **"How much?"** → "Fixed pricing, all on the site — Starter $1,500, Pro $2,500, full Brand + Content Engine $4,500 CAD. Want me to mock yours up first for $99, credited toward the build?"
+- **"How much?"** → "Fixed pricing, all on the site — Starter $1,500, Pro $2,500, full Brand + Content Engine $4,500 CAD. Right now I'm running a promo — I'll mock yours up for just $29 (normally $99), and the full $99 comes off your build."
 - **"I already have a Linktree."** → "Totally — and it works for links. But it can't tell your story, show results, or capture emails. That's the gap a real page closes."
 - **"Can you show me your work?"** → "Already did — that mockup is your site. That's exactly what you'd get, live in [X] days."
 - **"Let me think about it."** → "Of course. I'll hold a build slot for you this week — here's the link if you decide to move: [Stripe link]."
@@ -171,7 +171,7 @@ Before a full build, offer a **$99 real preview** of their site — credited 100
 - [ ] **Starter deposit** — $750 CAD, product name "Smidstad Starter Site (50% deposit)"
 - [ ] **Pro deposit** — $1,250 CAD, "Smidstad Pro Site (50% deposit)"
 - [ ] **Authority deposit** — $2,250 CAD, "Smidstad Brand + Content Engine (50% deposit)"
-- [ ] **$99 paid mockup** — "Smidstad Site Preview (credited toward build)"
+- [ ] **$29 promo mockup** — "Smidstad Site Preview — $29 Promo (full $99 value credited toward build)"
 - [ ] **Content retainer** — recurring subscription link(s) at $400 / $600 / $800 CAD/mo
 - [ ] Set currency to **CAD** on every link
 - [ ] Enable **"collect customer name + email"** on each link
